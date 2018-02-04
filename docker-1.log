@@ -18,3 +18,7 @@ test1                                             latest              e8b5b42c90
 postgres                                          latest              ff0943ecbb3c        10 months ago        267MB
 debian                                            stable              4f0a4f3c13a4        10 months ago        123MB
 atg-cicd:5000/jboss/wildfly-web-soap-promotions   0.0.1               7bc2f2428723        16 months ago        1.16GB
+
+В файл docker-1.log допишите свое заключение о том, почему выводы этих двух команд отличаются.
+
+Не понял немножко вопроса. docker inspect показывает низкоуровневую информацию о докер объектах. image и контейнер это разные объекты и было бы странно если бы у них были одинаковая информация. 
