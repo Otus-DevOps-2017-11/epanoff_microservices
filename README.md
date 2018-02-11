@@ -1,3 +1,15 @@
+# homework-17
+
+* Запускал контейнер в none сети. Есть только loopback интефейс
+* Запускал контйенер в host сети. Вывод ifconfig не отличается от вывода ifconfig хосты машины
+* Когда несколько раз запускаешь docker run --network host -d nginx то в живых остается только первый контейнер, так как он один успевает занять 80 порт на хосте.
+* Запускал контейнеры в созданной сети reddit  без алиасов (приложение не работает)  с алисами - работает.
+* Запускал контйейнеры в разных двух сетях где ui не может достучаться до бд
+* Рассмотрел выводы iptables, brctl show, docker network ls
+* Чтобы поменять префикс нужно добавить в .env COMPOSE_PROJECT_NAME=name либо запускать через  -p name
+* Создал docker-compose.override.yml в котором переопределил монторивание и запуск
+docker-compose -f docker-compose.yml -f docker-compose.override.yml up
+
 # homework-16
 
 * Перенес старые домашки в docker-monolith
