@@ -3,4 +3,4 @@ all:
       app:
         hosts:
           appserver:
-              ansible_host: 104.155.102.45
+              ansible_host: 104.199.110.167
