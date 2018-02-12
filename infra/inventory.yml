@@ -1,0 +1,6 @@
+all:
+   children:
+      app:
+        hosts:
+          appserver:
+              ansible_host: 104.155.102.45
