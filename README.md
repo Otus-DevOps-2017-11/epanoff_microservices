@@ -1,3 +1,16 @@
+# homework - 19
+
+* Развернул через terraform и ansible новый хост
+* Скопировал docker-compose файл
+* Запустил dokcer-compose
+* В гитлабе создал проект
+* Создал pipeline 
+* Запустил runner
+* Добавил  тестирование reddit в pipeline
+* Настроил публикацию в слак
+* Почитал про Runners autoscale configuration и Autoscaling GitLab Runner on AWS
+
+
 # homework-17
 
 * Запускал контейнер в none сети. Есть только loopback интефейс
