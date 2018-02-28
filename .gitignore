@@ -1,2 +1,5 @@
 .idea/
+*.tfvars
+.terraform
+infra/.terraform
 .env
