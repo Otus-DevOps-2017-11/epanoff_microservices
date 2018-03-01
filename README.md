@@ -1,3 +1,15 @@
+# homework - 21
+
+* Подготовил окружение prometheus. (Полюбившийся нам реддит + prometheus) Все при помощи  docker-machine и compose
+* Создал контейнер с prometheus
+* Поизучал ui и графике в прометеусе
+* Поузучал хелсчеки в прометеусе на примере графика ui_health
+* Создал node-exporter
+* Задания со звездочкой сделал все mongodb, blackbox и Makefile который умеет билдить и пушить  blackbox вдохновлялся
+https://medium.com/the-telegraph-engineering/how-prometheus-and-the-blackbox-exporter-makes-monitoring-microservice-endpoints-easy-and-free-of-a986078912ee
+mongodb exporter брал отсюда https://github.com/percona/mongodb_exporter
+
+
 # homework - 20
 
 * Создал новый проект

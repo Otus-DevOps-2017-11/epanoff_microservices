@@ -3,3 +3,8 @@
 .terraform
 infra/.terraform
 .env
+docker-compose.yml
+build_info.txt
+prometheus/
+*.pyc
+
