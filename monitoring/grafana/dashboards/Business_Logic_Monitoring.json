@@ -217,8 +217,8 @@
     "list": []
   },
   "time": {
-    "from": "2018-03-11T03:38:48.941Z",
-    "to": "2018-03-11T15:38:48.941Z"
+    "from": "now-5m",
+    "to": "now"
   },
   "timepicker": {
     "refresh_intervals": [

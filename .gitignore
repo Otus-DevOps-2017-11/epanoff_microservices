@@ -4,6 +4,5 @@
 infra/.terraform
 .env
 build_info.txt
-prometheus/
 *.pyc
 
