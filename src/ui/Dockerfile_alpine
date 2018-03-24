@@ -1,6 +1,5 @@
-FROM ubuntu:16.04
-RUN apt-get update \
-  && apt-get install -y ruby-full ruby-dev build-essential \
+FROM alpine:3.5
+RUN apk add --update ruby ruby-bundler ruby-dev build-base \
   && gem install bundler --no-ri --no-rdoc
 ENV APP_HOME=/app \
   POST_SERVICE_HOST=post \

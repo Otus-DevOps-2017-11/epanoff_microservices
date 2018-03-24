@@ -10,10 +10,20 @@ services:
     image: ${USERNAME}/ui:${VERSION_UI}
     ports:
       - ${PUBLISH_PORT_UI}:9292/tcp
+    logging:
+      driver: "fluentd"
+      options:
+        fluentd-address: localhost:24224
+        tag: service.ui
     networks:
       - front_net
   post:
     image: ${USERNAME}/post:${VERSION_POST}
+    logging:
+      driver: "fluentd"
+      options:
+        fluentd-address: localhost:24224
+        tag: service.post
     networks:
       - back_net
       - front_net
@@ -50,6 +60,7 @@ services:
       - front_net
     command:
       - '-mongodb.uri=mongodb://post_db:27017'
+
 
 volumes:
   post_db:
