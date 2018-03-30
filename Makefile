@@ -12,7 +12,7 @@ build_post:
 	cd src/post-py && bash docker_build.sh
 
 build_prometheus:
-	cd docker build -t $(USER_NAME)/prometheus:$(VERSION) monitoring/prometheus
+	docker build -t $(USER_NAME)/prometheus:$(VERSION) monitoring/prometheus
 
 build_mongo_exporter:
 	cd monitoring/mongo-exporter && docker build -t $(USER_NAME)/mongo-exporter:$(VERSION) .
