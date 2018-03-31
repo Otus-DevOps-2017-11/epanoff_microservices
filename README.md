@@ -1,3 +1,27 @@
+# homework - 28
+
+* Созданы файлы 
+
+docker/kubernetes/comment-deployment.yml
+docker/kubernetes/mongo-deployment.yml
+docker/kubernetes/post-deployment.yml
+docker/kubernetes/ui-deployment.yml
+
+* Создана папка docker/kubernetes/kubernetes_the_hard_way
+* Пройден туториал https://github.com/kelseyhightower/kubernetes-the-hard-way
+* Все артефакты которые появились в ходе туториала сохранены в папке docker/kubernetes/kubernetes_the_hard_way
+```
+epanov:kubernetes epanov$ kubectl get pods
+NAME                                  READY     STATUS    RESTARTS   AGE
+comment-deployment-679b694457-dzd88   1/1       Running   0          14m
+mongo-deployment-6897d74d54-c99bk     1/1       Running   0          1m
+post-deployment-65b7f5fdbc-5v8dk      1/1       Running   0          4m
+ui-deployment-7ffd7dbf9f-5m567        1/1       Running   0          4m
+epanov:kubernetes epanov$
+```
+* Кластер уничтожен
+* Задание со звездочкой поленился сделать. 
+
 # homework - 21
 
 * Подготовил окружение prometheus. (Полюбившийся нам реддит + prometheus) Все при помощи  docker-machine и compose
