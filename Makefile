@@ -12,7 +12,7 @@ build_post:
 	cd src/post-py && bash docker_build.sh
 
 build_prometheus:
-	cd docker build -t $(USER_NAME)/prometheus:$(VERSION) monitoring/prometheus
+	docker build -t $(USER_NAME)/prometheus:$(VERSION) monitoring/prometheus
 
 build_mongo_exporter:
 	cd monitoring/mongo-exporter && docker build -t $(USER_NAME)/mongo-exporter:$(VERSION) .
@@ -20,7 +20,10 @@ build_mongo_exporter:
 build_blackbox_exporter:
 	cd monitoring/blackbox-exporter/ && docker build -t $(USER_NAME)/blackbox-exporter:$(VERSION) .
 
-build_all: build_ui build_comment build_post build_prometheus build_mongo_exporter build_blackbox_exporter
+build_alertmanager:
+	cd monitoring/alertmanager/ && docker build -t $(USER_NAME)/alertmanager:$(VERSION) .
+
+build_all: build_ui build_comment build_post build_prometheus build_mongo_exporter build_blackbox_exporter build_alertmanager
 
 push_ui:
 	docker push $(USER_NAME)/ui:$(VERSION)
@@ -40,4 +43,7 @@ push_mongodb_exporter:
 push_blackbox_exporter:
 	docker push $(USER_NAME)/blackbox-exporter:$(VERSION)
 
-all: build_all push_ui push_comment push_post push_prometheus push_mongodb_exporter push_blackbox_exporter 
+push_alertmanager:
+	docker push $(USER_NAME)/alertmanager:$(VERSION)
+
+all: build_all push_ui push_comment push_post push_prometheus push_mongodb_exporter push_blackbox_exporter push_alertmanager

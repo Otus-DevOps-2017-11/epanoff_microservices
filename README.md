@@ -22,6 +22,34 @@ epanov:kubernetes epanov$
 * Кластер уничтожен
 * Задание со звездочкой поленился сделать. 
 
+#homework - 25
+
+* Работа с EFK стеком, это как ELK только с fluentd вместо логстеша
+* Cкопированы новые сорцы с https://github.com/express42/reddit/tree/logging
+* Пересобраны контейнеры приложения командой make
+* Изначально приложения были не рабочие (не понятно баг это или фича) 
+* Создан файл docker/docker-compose-logging.yml с EFK
+* Создан докерфайл и конфиг docker/fluentd
+* Настроена отпрака логов в fluentd и просмотр их в кибане
+* Добавлен фильтр на основе грока
+* Настроен zipkin
+
+Задания со звездочкой
+
+* добавлен грок для второго варианта
+* Найден проблемный кусок
+
+# homework -23
+
+* Разнес по файлам docker-compose.yml  и docker-compose-monitoring.yml, приложение и его мониторинг соответственно 
+* Появился новый контейнер cAdvisor
+* Появился новый контейнер graphana
+* Добавил новые шаблоны Business_Logic_Monitoring.json DockerMonitoring.json (скачал с сайта графаны) UI_SERVICE_MONITORING.json
+* Появился новый контйенер alermanager
+* В нем уведомление по почте и по slack
+* Сделал задания с одной звездочкой
+
+
 # homework - 21
 
 * Подготовил окружение prometheus. (Полюбившийся нам реддит + prometheus) Все при помощи  docker-machine и compose
