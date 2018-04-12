@@ -22,7 +22,40 @@ epanov:kubernetes epanov$
 * Кластер уничтожен
 * Задание со звездочкой поленился сделать. 
 
-#homework - 25
+# homework - 27
+
+* Построение кластера Docker Swarm
+* Конфигурирование приложения в Docker swarm в compose файлах
+* Создал воркеры и мастер
+```
+docker-machine create --driver google    --google-project  docker-shmoker     --google-zone europe-west1-b    --google-machine-type g1-small    --google-machine-image $(gcloud compute images list --filter ubuntu-1604-lts --uri)    worker-3
+```
+* Проинизиализировал кластер и присоеденил ноды
+```
+sudo docker swarm init
+sudo docker swarm join --token token-moken 10.132.0.2:2377
+```
+* Деплоил приложение 
+```
+docker stack deploy --compose-file=<(docker-compose -f docker-compose.yml config 2>/dev/null) DEV
+```
+* Размещаются приложения по нодам при помощи constraints например
+```
+constraints:
+          - node.role == worker
+```
+* Реплицируются при помощи replicated mode
+*  __Задание *__  В моем случае  когда добавил  worker-3 Уехало только одно приложение которое было global. Когда сделал число репликации 3 разъехались приложения на третью ноду
+Можно сделать вывод что очень лениво делается балансировка при скейлинге нод (Хотя может если бы приложение было падучее или под нагрузкой все было бы по другому )
+* Накрутил ручки restart_policy resources update_config в соотвествии с заданием
+* __Задание ***__ Compose использует .env файл в директории поэтому создал директории PROD и TEST сделал в них симлинку на docker-compose.yml и добавил env файлы где стабильные версии для прода и latest для теста
+Соотвественно команда останется прежняя
+```
+cd TEST; docker stack deploy --compose-file=<(docker-compose -f docker-compose.yml config 2>/dev/null) DEV; сd ..
+cd PROD; docker stack deploy --compose-file=<(docker-compose -f docker-compose.yml config 2>/dev/null) DEV; cd ..
+```
+
+# homework - 25
 
 * Работа с EFK стеком, это как ELK только с fluentd вместо логстеша
 * Cкопированы новые сорцы с https://github.com/express42/reddit/tree/logging
