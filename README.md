@@ -1,3 +1,18 @@
+
+# homework - 29
+
+* Установил minikube c virtualbox в качестве бекенда
+* Стартовал minikube
+* Изучил ~/.kube/config - minukube создает контекст
+* Запустил ui-deployment.yml post-deployment.yml comment-deployment.yml mongo-deployment.yml  
+* Запустил соотвествующие сервисы
+* Запустил дашборд kubernates в minikube
+* Настроил dev namespace 
+* Развернул kubernates в гугле
+* Запустил отработанные деплои  в гугле 
+* Запустил дашборд
+* Сделал все задания со звездочкой
+
 # homework - 28
 
 * Созданы файлы 
@@ -81,7 +96,6 @@ cd PROD; docker stack deploy --compose-file=<(docker-compose -f docker-compose.y
 * Появился новый контйенер alermanager
 * В нем уведомление по почте и по slack
 * Сделал задания с одной звездочкой
-
 
 # homework - 21
 
