@@ -20,7 +20,7 @@ spec:
         component: ui
     spec:
       containers:
-      - image: epanoff/ui
+      - image: epanoff/ui:1.0
         name: ui
         env:
           - name: ENV

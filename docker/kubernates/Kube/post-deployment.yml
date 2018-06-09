@@ -20,7 +20,7 @@ spec:
         component: post
     spec:
       containers:
-      - image: epanoff/post
+      - image: epanoff/post:1.0
         name: post
         env:
           - name: POST_DATABASE_HOST

@@ -1,4 +1,14 @@
 
+# Homework-30
+
+* Настроили публикацию ui через NodePort 
+* Настроили публикацию ui через LoadBalancer
+* Создал ui-ingress.yml
+* Настроил шифрование tls
+* Задание со * Описал создаваемый объект Secret в виде Kubernetes- манифеста - docker/kubernates/Kube/secret-ui-ingress.yml 
+* Настроил mongo-network-policy.yml 
+* Настроил динамический Persistance Volume для MongoDb 
+
 # homework - 29
 
 * Установил minikube c virtualbox в качестве бекенда
