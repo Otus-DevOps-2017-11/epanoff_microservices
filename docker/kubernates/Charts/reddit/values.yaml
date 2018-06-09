@@ -1,0 +1,12 @@
+comment:
+  image:
+    repository: epanoff/comment
+    tag: latest
+  service:
+    externalPort: 9292
+post:
+  image:
+    repository: epanoff/post
+    tag: latest
+    service:
+      externalPort: 5000
